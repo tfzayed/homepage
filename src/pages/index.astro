@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import * as linkFile from "../content/homepage/link.md";
+import { Content as Notes } from "../content/homepage/note.md";
+
+import Card from "../layouts/components/Card.astro";
+
+const links = linkFile.frontmatter.links;
+---
+
+<Layout title="Homepage">
+    <main>
+        <div class="shortcut">
+            <div class="links">
+                {
+                    links.map((link: any) => (
+                        <Card name={link.name} url={link.url} />
+                    ))
+                }
+            </div>
+        </div>
+        <div class="notes">
+            <Notes />
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url("/StreetWallpaper.jpg");
+    @apply text-lg;
+}
+
+main {
+    @apply row g-5;
+    .shortcut {
+        @apply col-7;
+        .links {
+            @apply row g-4;
+            .card {
+                @apply col-3;
+                &-url {
+                    @apply bg-card-bg py-8 text-body-txt rounded-lg flex justify-center items-center relative;
+                    a {
+                        @apply after:absolute after:inset-0;
+                    }
+                }
+            }
+        }
+    }
+    .notes {
+        @apply col-5 text-body-txt;
+    }
+}
