@@ -1,0 +1,10 @@
+{
+  "media": {
+    "root": "src/content/homepage",
+    "public": "src/layouts"
+  },
+  "content": {
+    "root": "src/layouts/components"
+  },
+  "themeConfig": []
+}
